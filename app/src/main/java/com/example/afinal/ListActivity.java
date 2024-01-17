@@ -41,13 +41,11 @@ public class ListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 HashMap<String, String> selectedItem = raw.get(position);
 
-                // Extract "Name" and "Sum" values
                 String name = selectedItem.get("name").toString();
                 String sum = selectedItem.get("sum").toString();
                 String n1 = selectedItem.get("num1").toString();
                 String n2 = selectedItem.get("num2").toString();
 
-                // Display a Toast with the extracted values
                 String toastMessage = String.format("%s: %s + %s = %s",name,n1,n2,sum);
                 Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
             }
